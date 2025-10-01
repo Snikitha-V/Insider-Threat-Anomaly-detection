@@ -1,0 +1,11 @@
+total_logins
+unique_days
+after_hours
+unique_machines
+usb_count
+usb_days
+O
+C
+E
+A
+N
