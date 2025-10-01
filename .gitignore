@@ -1,0 +1,13 @@
+# Large data files (keep essential ones: logon.csv, device.csv, psychometric.csv)
+r4.2/LDAP/*.csv
+
+# Virtual environment
+venv/
+
+# Jupyter notebook checkpoints
+.ipynb_checkpoints/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
