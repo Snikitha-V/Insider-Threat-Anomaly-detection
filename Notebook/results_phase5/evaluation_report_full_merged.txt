@@ -1,0 +1,16 @@
+Best threshold for Insider F1: 0.40
+
+Confusion Matrix:
+[[925   5]
+ [ 13  57]]
+
+Classification Report:
+              precision    recall  f1-score   support
+
+      Normal       0.99      0.99      0.99       930
+     Insider       0.92      0.81      0.86        70
+
+    accuracy                           0.98      1000
+   macro avg       0.95      0.90      0.93      1000
+weighted avg       0.98      0.98      0.98      1000
+

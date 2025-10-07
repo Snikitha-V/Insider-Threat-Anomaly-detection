@@ -1,0 +1,16 @@
+Best threshold from split: 0.14
+
+Confusion Matrix:
+[[924   6]
+ [ 11  59]]
+
+Classification Report:
+              precision    recall  f1-score   support
+
+      Normal       0.99      0.99      0.99       930
+     Insider       0.91      0.84      0.87        70
+
+    accuracy                           0.98      1000
+   macro avg       0.95      0.92      0.93      1000
+weighted avg       0.98      0.98      0.98      1000
+
