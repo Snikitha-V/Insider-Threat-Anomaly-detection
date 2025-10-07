@@ -2,7 +2,7 @@
 
 ##  Project Overview
 
-This project implements a comprehensive **Insider Threat Detection System** using machine learning techniques to identify malicious insider activities within an organization. The system combines multiple approaches including unsupervised anomaly detection, supervised learning with SMOTE, and hybrid models to achieve robust threat detection.
+This project implements a comprehensive **Insider Threat Detection System** using machine learning techniques to identify malicious insider activities within an organization. The system combines multiple approaches including unsupervised anomaly detection and supervised learning with SMOTE to achieve robust threat detection.
 
 ##  Problem Statement
 
@@ -69,30 +69,23 @@ Multiple algorithms are employed for anomaly detection:
 - Threshold tuning for optimal F1-score
 - Cross-validation for robust evaluation
 
-### Phase 6: Hybrid Approach
-####  **Combined Unsupervised Models**
-- Ensemble of Isolation Forest, LOF, and One-Class SVM
-- Score normalization and combination
-- Adaptive threshold selection
-- Enhanced robustness through model diversity
 
 ##  Key Results
 
 ### Model Performance Summary
 
-| Model | ROC-AUC | Precision | Recall | F1-Score |
-|-------|---------|-----------|--------|----------|
-| Isolation Forest | 0.847 | 0.124 | 0.891 | 0.219 |
-| LOF | 0.823 | 0.089 | 0.834 | 0.161 |
-| One-Class SVM | 0.798 | 0.095 | 0.723 | 0.168 |
-| Autoencoder | 0.865 | 0.145 | 0.912 | 0.249 |
-| **Hybrid Model** | **0.891** | **0.167** | **0.934** | **0.283** |
-| RF + SMOTE | 0.878 | 0.156 | 0.889 | 0.265 |
+| Model | ROC-AUC | Precision | Recall | F1-Score | Accuracy |
+|-------|---------|-----------|--------|----------|----------|
+| Isolation Forest | 0.847 | 0.124 | 0.891 | 0.219 | - |
+| LOF | 0.823 | 0.089 | 0.834 | 0.161 | - |
+| One-Class SVM | 0.798 | 0.095 | 0.723 | 0.168 | - |
+| Autoencoder | 0.865 | 0.145 | 0.912 | 0.249 | - |
+| **RF + SMOTE (Full Dataset)** | **0.947** | **0.91** | **0.84** | **0.87** | **0.98** |
 
 ###  Best Performing Models
-1. **Hybrid Unsupervised Model**: Highest ROC-AUC (0.891) and Recall (0.934)
-2. **Autoencoder**: Best single unsupervised model performance
-3. **Random Forest + SMOTE**: Strong supervised learning performance
+1. **Random Forest + SMOTE**: Best overall performance with 98% accuracy and balanced precision-recall
+2. **Autoencoder**: Best single unsupervised model performance  
+3. **Isolation Forest**: Strong unsupervised anomaly detection capability
 
 ##  Visualizations
 
@@ -136,7 +129,6 @@ joblib>=1.3.2
 │   ├── phase3_anamoly.ipynb          # Unsupervised Anomaly Detection
 │   ├── phase4_modeling.ipynb         # Individual Model Training
 │   ├── phase5_evaluation.ipynb       # Supervised Learning & Evaluation
-│   ├── Hybrid_Approach.ipynb         # Combined Model Implementation
 │   ├── models/                       # Saved trained models
 │   ├── results/                      # Phase 3-4 outputs
 │   └── results_phase5/               # Final evaluation results
@@ -164,7 +156,6 @@ Execute notebooks in sequence:
 2. `phase3_anamoly.ipynb` - Unsupervised models
 3. `phase4_modeling.ipynb` - Model training
 4. `phase5_evaluation.ipynb` - Supervised learning
-5. `Hybrid_Approach.ipynb` - Combined model
 
 ##  Key Insights
 
@@ -175,7 +166,6 @@ Execute notebooks in sequence:
 4. **Temporal Inconsistencies**: Irregular activity patterns over time
 
 ### Model Strengths
-- **Hybrid Approach**: Combines strengths of multiple algorithms
 - **SMOTE Integration**: Effectively handles severe class imbalance
 - **Feature Engineering**: Domain-specific behavioral metrics
 - **Interpretability**: Feature importance and threshold analysis
@@ -203,9 +193,13 @@ Execute notebooks in sequence:
 
 ##  Performance Metrics Summary
 
-The project achieves state-of-the-art performance in insider threat detection:
-- **Detection Rate**: 93.4% (Hybrid Model)
-- **False Positive Rate**: 8.3%
+The project achieves excellent performance in insider threat detection:
+
+### RF + SMOTE Full Dataset Results (1000 users, 70 insiders):
+- **91% Precision**: Minimal false alarms in production environment
+- **84% Recall**: Strong threat detection capability  
+- **98% Accuracy**: Excellent overall performance
+- **87% F1-Score**: Well-balanced precision-recall trade-off
 - **Processing Speed**: Real-time capable
 - **Scalability**: Handles 1000+ users efficiently
 
