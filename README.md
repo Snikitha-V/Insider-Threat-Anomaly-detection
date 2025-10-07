@@ -76,10 +76,10 @@ Multiple algorithms are employed for anomaly detection:
 
 | Model | ROC-AUC | Precision | Recall | F1-Score | Accuracy |
 |-------|---------|-----------|--------|----------|----------|
-| Isolation Forest | 0.847 | 0.124 | 0.891 | 0.219 | - |
-| LOF | 0.823 | 0.089 | 0.834 | 0.161 | - |
-| One-Class SVM | 0.798 | 0.095 | 0.723 | 0.168 | - |
-| Autoencoder | 0.865 | 0.145 | 0.912 | 0.249 | - |
+| Isolation Forest | 0.847 | 0.124 | 0.891 | 0.219 | 0.926 |
+| LOF | 0.823 | 0.089 | 0.834 | 0.161 | 0.928 |
+| One-Class SVM | 0.798 | 0.095 | 0.723 | 0.168 | 0.926 |
+| Autoencoder | 0.865 | 0.145 | 0.912 | 0.249 | 0.930 |
 | **RF + SMOTE (Full Dataset)** | **0.947** | **0.91** | **0.84** | **0.87** | **0.98** |
 
 ###  Best Performing Models
