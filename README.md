@@ -52,11 +52,11 @@ The supervised model is trained on the engineered user feature set with SMOTE ap
    ```
                         precision    recall  f1-score   support
 
-            Normal       0.99      0.99      0.99       930
-          Insider       0.91      0.84      0.87        70
+            Normal     0.99      0.99      0.99       930
+          Insider      0.91      0.84      0.87        70
 
-         accuracy                           0.98      1000
-       macro avg       0.95      0.92      0.93      1000
+         accuracy                         
+       macro avg      0.95      0.92      0.93      1000
    weighted avg       0.98      0.98      0.98      1000
    ```
 
@@ -105,4 +105,5 @@ Note: A smaller diagnostic split is also saved in `results_phase5/evaluation_rep
 - `Notebook/` — Jupyter notebooks for each phase
 
 ---
+
 For more details, see the notebooks and scripts in the project root and `Notebook/` folder.
