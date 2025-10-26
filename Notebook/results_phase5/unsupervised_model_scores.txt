@@ -1,0 +1,10 @@
+Unsupervised Model Accuracy: 0.904
+
+              precision    recall  f1-score   support
+
+      Normal       0.94      0.96      0.95       930
+     Insider       0.24      0.17      0.20        70
+
+    accuracy                           0.90      1000
+   macro avg       0.59      0.57      0.57      1000
+weighted avg       0.89      0.90      0.90      1000

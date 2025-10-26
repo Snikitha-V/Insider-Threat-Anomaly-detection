@@ -10,6 +10,24 @@ Major Changes
 * An additional red team scenario was added. (All previous red team scnearios also occur in the dataset.)
 * This is a "dense needles" dataset. There is an unrealistically high amount of red team data interspersed.
 
+--------------------------------------------------
+Anomaly Detection Results (Phase 5)
+--------------------------------------------------
+This project includes unsupervised anomaly detection to identify potential insider threats using behavioral and psychometric features.
+
+Key results:
+- The main unsupervised model used is Isolation Forest, which assigns each user an anomaly score and a binary anomaly label (0 = normal, 1 = anomaly).
+- The anomaly scores and labels are saved in `results/anomaly_scores_by_user.csv`.
+- Model accuracy and classification metrics are evaluated by comparing predicted anomaly labels to ground truth insider labels from `answers_r42.csv`.
+- The evaluation results (accuracy, precision, recall, F1-score) are printed in the notebook and saved to `results_phase5/unsupervised_model_scores.txt`.
+- If you wish to evaluate other models (LOF, One-Class SVM, Autoencoder), you must generate and save their predictions in separate columns or files.
+
+How accuracy is calculated:
+1. The Isolation Forest model predicts anomaly labels for each user.
+2. These predictions are merged with ground truth labels.
+3. Standard metrics (accuracy, precision, recall, F1-score) are computed and saved.
+
+See the notebook `phase5_retry.ipynb` for the evaluation workflow and code.
 
 license.txt
 * ExactData license information
